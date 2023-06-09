@@ -88,6 +88,7 @@ const saveFile = (text: string, filename: string) => {
 
 <template>
   <header>
+    <img class="logo" src="/logo.svg" alt="Logo" />
     <h1>Coverage Extractor</h1>
     <button @click="selectFile">Select Coverage JSON File</button>
     <span v-if="fileName">{{ fileName }}</span>
@@ -107,6 +108,11 @@ const saveFile = (text: string, filename: string) => {
 </template>
 
 <style scoped>
+.logo {
+  height: 36px;
+  width: 36px;
+}
+
 header {
   display: flex;
   align-items: center;
