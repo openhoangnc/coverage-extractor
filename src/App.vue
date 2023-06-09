@@ -92,6 +92,8 @@ const saveFile = (text: string, filename: string) => {
     <h1>Coverage Extractor</h1>
     <button @click="selectFile">Select Coverage JSON File</button>
     <span v-if="fileName">{{ fileName }}</span>
+    <a href="https://github.com/openhoangnc/coverage-extractor" target="_blank">
+      Github</a>
   </header>
   <div class="card-header" v-if="coverageFiles.length">
     <span class="file-name">File
@@ -119,6 +121,12 @@ header {
   gap: 8px;
   height: 36px;
   padding-bottom: 20px;
+  justify-content: space-between;
+}
+
+header :nth-last-child(1) {
+  flex: 1;
+  text-align: right;
 }
 
 .card {
